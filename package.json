@@ -1,6 +1,6 @@
 {
 	"name": "kawari7worker.js",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "WebWorker SHIORI subsystem KAWARI7",
 	"keywords": ["web", "worker"],
 	"main": "kawari7worker.js",
@@ -15,7 +15,8 @@
 		"nativeshiori": "",
 		"WorkerClientServer": "Narazaka/WorkerClientServer",
 		"NativeShioriWorker": "Ikagaka/NativeShioriWorker",
-		"encoding-japanese": "polygonplanet/encoding.js#master"
+		"encoding-japanese": "polygonplanet/encoding.js#master",
+		"bluebird": ""
 	},
 	"author": {
 		"name": "narazaka",

@@ -1,30 +1,38 @@
 {
-	"name": "kawari7worker.js",
-	"version": "0.0.2",
-	"description": "WebWorker SHIORI subsystem KAWARI7",
-	"keywords": ["web", "worker"],
-	"main": "kawari7worker.js",
-	"scripts": {
-		"test": "mocha"
-	},
-	"dependencies": {
-	},
-	"devDependencies": {
-		"coffee-script": ">= 1.9.0",
-		"kawari7.js": "",
-		"nativeshiori": "",
-		"WorkerClientServer": "Narazaka/WorkerClientServer",
-		"NativeShioriWorker": "Ikagaka/NativeShioriWorker",
-		"encoding-japanese": "polygonplanet/encoding.js#master",
-		"bluebird": ""
-	},
-	"author": {
-		"name": "narazaka",
-		"url": "http://narazaka.net/"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Ikagaka/kawari7worker.js.git"
-	}
+  "name": "kawari7worker.js",
+  "version": "0.0.2",
+  "description": "WebWorker SHIORI subsystem KAWARI7",
+  "keywords": [
+    "web",
+    "worker",
+    "ikagaka",
+    "ukagaka"
+  ],
+  "main": "./kawari7worker-fork.js",
+  "browser": "./kawari7worker-webworker-all.js",
+  "scripts": {
+    "build": "npm run build-fork && npm run build-webworker && npm run build-webworker-all",
+    "build-fork": "makefork Kawari7 kawari7 kawari7.js > kawari7worker-fork.js",
+    "build-webworker": "makewebworker Kawari7 kawari7 node_modules/kawari7.js/kawari7.js > kawari7worker-webworker.js",
+    "build-webworker-all": "makewebworker all Kawari7 kawari7 node_modules/kawari7.js/kawari7.js > kawari7worker-webworker-all.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "browserfs": "^0.5.12",
+    "kawari7.js": "^0.2.0",
+    "native-shiori-worker": "^1.1.3",
+    "nativeshiori": "^2.2.2",
+    "shioriloader": "^1.0.1",
+    "single-file-worker": "^1.0.0",
+    "worker-client-server": "^0.3.1"
+  },
+  "author": {
+    "name": "narazaka",
+    "url": "http://narazaka.net/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ikagaka/kawari7worker.js.git"
+  }
 }
